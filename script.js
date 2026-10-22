@@ -22,7 +22,7 @@
   var POPUPS = [
     {
       title: 'Tết Nguyên Đán Cổ Truyền',
-      img: null,
+      img: 'assets/tet.jpg',
       desc: 'Tết Nguyên Đán là lễ hội lớn nhất trong năm của người Việt Nam, là thời điểm gia đình đoàn tụ, tưởng nhớ tổ tiên và cầu mong một năm mới an khang thịnh vượng với mâm ngũ quả, bánh chưng bánh giầy.',
       meaning: 'Thể hiện đạo lý "Uống nước nhớ nguồn", gắn kết tình thân gia đình và nét đẹp tâm linh hướng về cội nguồn.'
     },
@@ -76,7 +76,7 @@
     },
     {
       title: 'Tranh Dân Gian Đông Hồ',
-      img: null,
+      img: 'assets/dongho.jpg',
       desc: 'Dòng tranh in từ bản gỗ trên giấy điệp tự nhiên với màu sắc chế tác từ than lá tre, hoa hoa đò, sò điệp... mang đề tài sinh hoạt làng quê mộc mạc.',
       meaning: 'Lưu giữ triết lý sống hồn nhiên, ước vọng ấm no hạnh phúc của người dân lao động.'
     },
