@@ -370,6 +370,7 @@ section { scroll-margin-top: 70px; }
   border-radius: 14px;
   padding: 16px 22px;
   transition: background .2s ease, transform .2s ease;
+  cursor: pointer;
 }
 .heritage-item:hover { background: rgba(255,255,255,.12); transform: translateX(6px); }
 .heritage-item h4 { color: #e1ff00; font-weight: 800; font-size: 13px; margin-bottom: 5px; }

@@ -94,14 +94,19 @@
   var popupTitle = document.getElementById('popupTitle');
   var popupDesc = document.getElementById('popupDesc');
   var popupMeaning = document.getElementById('popupMeaning');
+  var popupMeaningBox = document.getElementById('popupMeaningBox');
   var popupClose = document.getElementById('popupClose');
 
-  function openPopup(index) {
-    var data = POPUPS[index];
+  function openPopupData(data) {
     if (!data) return;
     popupTitle.textContent = data.title;
     popupDesc.textContent = data.desc;
-    popupMeaning.textContent = data.meaning;
+    if (data.meaning) {
+      popupMeaning.textContent = data.meaning;
+      popupMeaningBox.style.display = '';
+    } else {
+      popupMeaningBox.style.display = 'none';
+    }
     if (data.img) {
       popupImg.src = data.img;
       popupImg.alt = data.title;
@@ -115,6 +120,10 @@
     overlay.setAttribute('aria-hidden', 'false');
     document.body.classList.add('popup-open');
     popupClose.focus();
+  }
+
+  function openPopup(index) {
+    openPopupData(POPUPS[index]);
   }
 
   function closePopup() {
@@ -140,19 +149,19 @@
   /* ---------- UNESCO region tabs: swap heritage list per region ---------- */
   var REGIONS = {
     bac: [
-      { t: 'Nhã Nhạc Cung Đình Huế (Thừa Thiên Huế)', d: 'Âm nhạc bác học truyền thống trên sân khấu cung đình, biểu tượng cho uy quyền và nét đẹp đài các.' },
-      { t: 'Dân Ca Quan Họ Bắc Ninh', d: 'Nghệ thuật trình diễn dân ca đối đáp đặc sắc của vùng Kinh Bắc với trang phục độc đáo.' },
-      { t: 'Hát Xoan Phú Thọ', d: 'Loại hình dân ca lễ nghi cầu mùa, gắn liền với tín ngưỡng thờ cúng Hùng Vương.' },
-      { t: 'Tín Ngưỡng Thờ Cúng Hùng Vương', d: 'Biểu tượng gắn kết cộng đồng, lòng tri ân công đức tổ tiên dựng nước.' }
+      { t: 'Dân Ca Quan Họ Bắc Ninh', d: 'Nghệ thuật trình diễn dân ca đối đáp đặc sắc của vùng Kinh Bắc với trang phục độc đáo.', img: 'assets/quanho.jpg' },
+      { t: 'Hát Xoan Phú Thọ', d: 'Loại hình dân ca lễ nghi cầu mùa, gắn liền với tín ngưỡng thờ cúng Hùng Vương.', img: 'assets/unesco-xoan.jpg' },
+      { t: 'Tín Ngưỡng Thờ Cúng Hùng Vương', d: 'Biểu tượng gắn kết cộng đồng, lòng tri ân công đức tổ tiên dựng nước.', img: 'assets/unesco-hungvuong.jpg' }
     ],
     trung: [
-      { t: 'Không Gian Văn Hóa Cồng Chiêng Tây Nguyên', d: 'Âm thanh đại ngàn kết nối con người với thần linh, gắn liền với các lễ hội vòng đời.' },
-      { t: 'Nghệ Thuật Bài Chòi Trung Bộ', d: 'Trò chơi dân gian kết hợp âm nhạc, thơ ca và diễn xướng vui nhộn trong ngày Tết.' },
-      { t: 'Nghệ Thuật Làm Gốm Của Người Chăm', d: 'Kỹ thuật làm gốm thủ công không dùng bàn xoay độc đáo preserved ở Ninh Thuận, Bình Thuận.' }
+      { t: 'Nhã Nhạc Cung Đình Huế (Thừa Thiên Huế)', d: 'Âm nhạc bác học truyền thống trên sân khấu cung đình, biểu tượng cho uy quyền và nét đẹp đài các.', img: 'assets/unesco-nhanhac.jpg' },
+      { t: 'Không Gian Văn Hóa Cồng Chiêng Tây Nguyên', d: 'Âm thanh đại ngàn kết nối con người với thần linh, gắn liền với các lễ hội vòng đời.', img: 'assets/unesco-congchieng.jpg' },
+      { t: 'Nghệ Thuật Bài Chòi Trung Bộ', d: 'Trò chơi dân gian kết hợp âm nhạc, thơ ca và diễn xướng vui nhộn trong ngày Tết.', img: 'assets/unesco-baichoi.jpg' },
+      { t: 'Nghệ Thuật Làm Gốm Của Người Chăm', d: 'Kỹ thuật làm gốm thủ công không dùng bàn xoay độc đáo preserved ở Ninh Thuận, Bình Thuận.', img: 'assets/unesco-gomcham.jpg' }
     ],
     nam: [
-      { t: 'Nghệ Thuật Đờn Ca Tài Tử Nam Bộ', d: 'Dòng âm nhạc dân gian đặc trưng miền sông nước phương Nam, phóng khoáng và ngẫu hứng.' },
-      { t: 'Lễ Hội Bà Chúa Xứ Núi Sam (An Giang)', d: 'Lễ hội tâm linh lớn nhất ĐBSCL thể hiện lòng kính ngưỡng và tinh thần bao dung văn hóa.' }
+      { t: 'Nghệ Thuật Đờn Ca Tài Tử Nam Bộ', d: 'Dòng âm nhạc dân gian đặc trưng miền sông nước phương Nam, phóng khoáng và ngẫu hứng.', img: 'assets/unesco-donca.jpg' },
+      { t: 'Lễ Hội Bà Chúa Xứ Núi Sam (An Giang)', d: 'Lễ hội tâm linh lớn nhất ĐBSCL thể hiện lòng kính ngưỡng và tinh thần bao dung văn hóa.', img: 'assets/unesco-bachua.jpg' }
     ]
   };
 
@@ -160,18 +169,32 @@
   var heritageList = document.querySelector('.heritage-list');
   var regionKeys = ['bac', 'trung', 'nam'];
 
+  // Render the initial list from data so static markup and JS stay in sync
+  renderRegion('bac');
+
   function renderRegion(key) {
     var items = REGIONS[key] || [];
     heritageList.innerHTML = '';
     items.forEach(function (item) {
       var article = document.createElement('article');
       article.className = 'heritage-item visible';
+      article.setAttribute('role', 'button');
+      article.setAttribute('tabindex', '0');
       var h4 = document.createElement('h4');
       h4.textContent = item.t;
       var p = document.createElement('p');
       p.textContent = item.d;
       article.appendChild(h4);
       article.appendChild(p);
+      article.addEventListener('click', function () {
+        openPopupData({ title: item.t, desc: item.d, img: item.img });
+      });
+      article.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openPopupData({ title: item.t, desc: item.d, img: item.img });
+        }
+      });
       heritageList.appendChild(article);
     });
     heritageList.classList.remove('is-swapping');
