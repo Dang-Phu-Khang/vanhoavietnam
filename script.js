@@ -157,7 +157,8 @@
       { t: 'Nhã Nhạc Cung Đình Huế (Thừa Thiên Huế)', d: 'Âm nhạc bác học truyền thống trên sân khấu cung đình, biểu tượng cho uy quyền và nét đẹp đài các.', img: 'assets/unesco-nhanhac.jpg' },
       { t: 'Không Gian Văn Hóa Cồng Chiêng Tây Nguyên', d: 'Âm thanh đại ngàn kết nối con người với thần linh, gắn liền với các lễ hội vòng đời.', img: 'assets/unesco-congchieng.jpg' },
       { t: 'Nghệ Thuật Bài Chòi Trung Bộ', d: 'Trò chơi dân gian kết hợp âm nhạc, thơ ca và diễn xướng vui nhộn trong ngày Tết.', img: 'assets/unesco-baichoi.jpg' },
-      { t: 'Nghệ Thuật Làm Gốm Của Người Chăm', d: 'Kỹ thuật làm gốm thủ công không dùng bàn xoay độc đáo preserved ở Ninh Thuận, Bình Thuận.', img: 'assets/unesco-gomcham.jpg' }
+      { t: 'Nghệ Thuật Làm Gốm Của Người Chăm', d: 'Kỹ thuật làm gốm thủ công không dùng bàn xoay độc đáo preserved ở Ninh Thuận, Bình Thuận.', img: 'assets/unesco-gomcham.jpg' },
+      { t: 'Di sản Phố Cổ Hội An', d: 'Phố Cổ Hội An được UNESCO công nhận là Di sản Văn hóa Thế giới vào ngày 4 tháng 12 năm 1999.', img: 'assets/unesco-hoian.jpg' }
     ],
     nam: [
       { t: 'Nghệ Thuật Đờn Ca Tài Tử Nam Bộ', d: 'Dòng âm nhạc dân gian đặc trưng miền sông nước phương Nam, phóng khoáng và ngẫu hứng.', img: 'assets/unesco-donca.jpg' },
